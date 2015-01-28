@@ -3,7 +3,7 @@
 Plugin Name: WP Code Prettify
 Plugin URI: http://wordpress.org/extend/plugins/wp-code-prettify/
 Description: This plugin enable syntax highlighting of code snippets in your post using Google Code Prettify.
-Version: 0.2.3
+Version: 0.2.4
 Author: Soli
 Author URI: http://www.cbug.org
 Text Domain: wp-code-prettify
@@ -193,7 +193,7 @@ function RegisterPluginLinks($links, $file) {
 	$base = plugin_basename(__FILE__);
 	if ($file ==$base) {
 		$links[] = '<a href="options-general.php?page=wp-code-prettify">' . __('Settings','wp-code-prettify') . '</a>';
-		$links[] = '<a href="http://www.cbug.org/category/wp-code-prettify/">' . __('FAQ','wp-code-prettify') . '</a>';
+		$links[] = '<a href="http://www.cbug.org/tag/wp-code-prettify/">' . __('FAQ','wp-code-prettify') . '</a>';
 	}
 	return $links;
 }
@@ -252,4 +252,4 @@ if(class_exists('WPCodePrettifyPage')) {
 		add_action('admin_menu', array(&$wpcodeprettify_page, 'WPCodePrettify_Menu'), 1);
 	}
 }
-?>
+
